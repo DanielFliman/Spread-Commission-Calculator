@@ -37,14 +37,15 @@ public class Main {
 		while (check) {
 			System.out.print("Please enter amount of spread (press enter to terminate): ");
 			String read = reader.nextLine();
+			// Allows user to enter number in any format (ex. with dollar signs and commas)
 			read = read.replaceAll("[^\\d.]", "");
 			if (!read.isBlank()) {
 				double com = Double.parseDouble(read);
 				pay = Calculate(com);
-				System.out.printf("Weekly pay: $%.2f", pay);
+				System.out.printf("Weekly commission: $%.2f", pay);
 				System.out.println();
 				pay *= 52;
-				System.out.printf("Yearly pay: $%.2f", pay);
+				System.out.printf("Yearly commission: $%.2f", pay);
 				System.out.println();
 				System.out.println();
 			} else {
