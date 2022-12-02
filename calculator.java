@@ -37,6 +37,7 @@ public class Main {
 		while (check) {
 			System.out.print("Please enter amount of spread (press enter to terminate): ");
 			String read = reader.nextLine();
+			read = read.replaceAll("[^\\d.]", "");
 			if (!read.isBlank()) {
 				double com = Double.parseDouble(read);
 				pay = Calculate(com);
